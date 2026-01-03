@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <title>Speedcubing Practice Form</title> <!-- Page title -->
+    
+    <!-- Bootstrap CSS framework -->
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    >
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Speedcubing Practice Session</h2> <!-- Page heading -->
+
+    <!-- Form with submit validation handler -->
+    <form id="cubeForm" onsubmit="return validateForm()">
+
+        <!-- Name input field with validation -->
+        <div class="form-group">
+            <label for="name">Cuber Name</label>
+            <input 
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+                minlength="3"
+            >
+        </div>
+
+        <!-- Email input with browser validation -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="example@email.com"
+                required
+            >
+        </div>
+
+        <!-- Cube type dropdown selection -->
+        <div class="form-group">
+            <label for="cubeType">Cube Type</label>
+            <select id="cubeType" class="form-control" required>
+                <option value="">Select cube</option>
+                <option>3x3</option>
+                <option>4x4</option>
+                <option>5x5</option>
+                <option>2x2</option>
+            </select>
+        </div>
+
+        <!-- Numeric input for solve time with range limits -->
+        <div class="form-group">
+            <label for="time">Best Solve Time (seconds)</label>
+            <input 
+                type="number"
+                id="time"
+                class="form-control"
+                min="1"
+                max="600"
+                required
+            >
+        </div>
+
+        <!-- Radio button group for practice method (single selection) -->
+        <div class="form-group">
+            <label>Practice Method</label><br>
+            <label>
+                <input type="radio" name="practice" value="CFOP" required> CFOP
+            </label>
+            <label>
+                <input type="radio" name="practice" value="Roux"> Roux
+            </label>
+        </div>
+
+        <!-- Optional checkbox for timer usage -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="timerUsed"> Used Stackmat Timer
+            </label>
+        </div>
+
+        <!-- Date picker for practice date -->
+        <div class="form-group">
+            <label for="date">Practice Date</label>
+            <input type="date" id="date" class="form-control" required>
+        </div>
+
+        <!-- Form submission button -->
+        <button type="submit" class="btn btn-primary btn-block">
+            Submit Practice
+        </button>
+
+    </form>
+
+    <!-- Success message display area -->
+    <p id="result" class="text-success text-center"></p>
+</div>
+
+<!-- JavaScript validation script -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Reset default browser margins and set background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Heading styling */
+h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Main container with card-like appearance and shadow */
+.container {
+    max-width: 520px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Card shadow effect */
+}
+
+/* Form label styling */
+label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* Input focus state with blue border and glow */
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Primary submit button styling */
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Button hover state with darker blue */
+.btn-primary:hover {
+    background-color: #2c80b4;
+}
+
+/* Success message text styling */
+#result {
+    margin-top: 15px;
+    font-weight: 500;
+}
